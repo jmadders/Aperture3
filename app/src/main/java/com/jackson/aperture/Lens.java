@@ -3,33 +3,51 @@ package com.jackson.aperture;
 public class Lens {
 
     String lensName;
-    int minAperture;
-    int maxAperture;
-    int focalLength;
+    int minFocalLength;
+    int maxFocalLength;
+    boolean prime;
+    double[] apertureArray;
 
-    public int getFocalLength() {
-        return focalLength;
+    public Lens(String lensName, int minFocalLength, int maxFocalLength, boolean prime, double[] apertureArray) {
+        this.lensName = lensName;
+        this.minFocalLength = minFocalLength;
+        this.maxFocalLength = maxFocalLength;
+        this.prime = prime;
+        this.apertureArray = apertureArray;
     }
 
-    public void setFocalLength(int focalLength) {
-        this.focalLength = focalLength;
+    public int getMinFocalLength() {
+        return minFocalLength;
     }
 
-    public int getMinAperture() {
-        return minAperture;
+    public void setMinFocalLength(int minFocalLength) {
+        this.minFocalLength = minFocalLength;
     }
 
-    public void setMinAperture(int minAperture) {
-        this.minAperture = minAperture;
+    public int getMaxFocalLength() {
+        return maxFocalLength;
     }
 
-    public int getMaxAperture() {
-        return maxAperture;
+    public void setMaxFocalLength(int maxFocalLength) {
+        this.maxFocalLength = maxFocalLength;
     }
 
-    public void setMaxAperture(int maxAperture) {
-        this.maxAperture = maxAperture;
+    public boolean isPrime() {
+        return prime;
     }
+
+    public void setPrime(boolean prime) {
+        this.prime = prime;
+    }
+
+    public double[] getApertureArray() {
+        return apertureArray;
+    }
+
+    public void setApertureArray(double[] apertureArray) {
+        this.apertureArray = apertureArray;
+    }
+
     public String getLensName() {
         return lensName;
     }
